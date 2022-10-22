@@ -5,6 +5,7 @@ C:\\App\\docker\\rocketmq\\docker\\rocketmq\\data\\namesrv\\logs
 C:\\App\\docker\\rocketmq\\docker\\rocketmq\\data\\namesrv\\store
 C:\\App\\docker\\rocketmq\\docker\\rocketmq\\data\\broker\\logs
 C:\\App\\docker\\rocketmq\\docker\\rocketmq\\data\\broker\\store
+
 C:\\App\\docker\\rocketmq\\docker\\rocketmq\\etc\\broker
 
 # broker.conf 放置指定位置
