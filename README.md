@@ -2,9 +2,11 @@
 
 # 環境準備 - Create Folder
 C:\\App\\docker\\rocketmq\\data\\namesrv\\logs
+
 C:\\App\\docker\\rocketmq\\data\\namesrv\\store
 
 C:\\App\\docker\\rocketmq\\data\\broker\\logs
+
 C:\\App\\docker\\rocketmq\\data\\broker\\store
 
 C:\\App\\docker\\rocketmq\\etc\\broker
