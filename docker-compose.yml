@@ -9,7 +9,8 @@ services:
     environment:
       - JAVA_OPT_EXT=-server -Xms256m -Xmx256m -Xmn256m
     volumes:
-      - C:\\App\\docker\\rocketmq\\docker\\rocketmq\\data\\namesrv\\logs:/root/logs
+      - C:\\App\\docker\\rocketmq\\data\\namesrv\\logs:/root/logs
+      - C:\\App\\docker\\rocketmq\\data\\namesrv\\store:/root/store
     command: sh mqnamesrv
 
   #Service for broker
@@ -28,9 +29,9 @@ services:
       - NAMESRV_ADDR=namesrv:9876
       - JAVA_OPT_EXT=-server -Xms512m -Xmx512m -Xmn256m
     volumes:
-      - C:\\App\\docker\\rocketmq\\docker\\rocketmq\\data\\broker\\logs:/home/rocketmq/logs
-      - C:\\App\\docker\\rocketmq\\docker\\rocketmq\\data\\broker\\store:/home/rocketmq/store
-      - C:\\App\\docker\\rocketmq\\docker\\rocketmq\\etc\\broker\\broker.conf:/home/rocketmq/conf/broker.conf
+      - C:\\App\\docker\\rocketmq\\data\\broker\\logs:/home/rocketmq/logs
+      - C:\\App\\docker\\rocketmq\\data\\broker\\store:/home/rocketmq/store
+      - C:\\App\\docker\\rocketmq\\etc\\broker\\broker.conf:/home/rocketmq/conf/broker.conf
     command: sh mqbroker -c /home/rocketmq/conf/broker.conf
 
   #Service for rocketmq-dashboard
@@ -38,7 +39,7 @@ services:
     image: apacherocketmq/rocketmq-dashboard:latest
     container_name: rocketmq-dashboard
     ports:
-      - 8081:8080
+      - 8089:8080
     links:
       - namesrv
     depends_on:
