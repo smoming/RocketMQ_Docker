@@ -14,6 +14,8 @@ C:\\App\\docker\\rocketmq\\etc\\broker
 # broker.conf 放置指定位置
 C:\\App\\docker\\rocketmq\\etc\\broker\\broker.conf
 
+檔案內容參數設定brokerIP1需透過 docker network inspect {rocketmq network id or name}取得 broker IP
+
 # 執行 docker-compose yml 檔案
 docker-compose -f docker-compose.yml up -d
 
